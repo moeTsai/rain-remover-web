@@ -69,7 +69,7 @@ def parse(opt_path, is_train=True):
     )
     path = osp.abspath(__file__)
     # print('path', path)
-    config_dir = path.split("/")[-2]
+    config_dir = path.split("\\")[-2]
     # print('config_dir = ', config_dir)
     current_dir = os.getcwd()
     # print('current_dir', current_dir)
