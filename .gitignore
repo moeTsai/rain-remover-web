@@ -1,0 +1,4 @@
+
+backend/dino_vit/checkpoints/checkpoint.pth
+backend/dino_vit/checkpoints/dino_vitbase8_pretrain.pth
+*.zip
