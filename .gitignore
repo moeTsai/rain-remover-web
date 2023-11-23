@@ -7,3 +7,4 @@ backend/dino_vit/checkpoints/dino_vitbase8_pretrain.pth
 backend/dino_vit/checkpoints/checkpoint.pth
 >>>>>>> Stashed changes
 *.zip
+backend/Deraining/700000_G.pth

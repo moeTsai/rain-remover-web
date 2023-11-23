@@ -1,5 +1,5 @@
 name: ir-sde
-suffix: ~  # add suffix to saved images
+suffix: ~ # add suffix to saved images
 model: denoising
 distortion: derain
 gpu_ids: [0]
@@ -9,7 +9,7 @@ sde:
   T: 100
   schedule: cosine # linear, cosine
   eps: 0.005
-  
+
 degradation:
   # for denoising
   sigma: 25
@@ -22,8 +22,8 @@ datasets:
   test1:
     name: Val_Dataset
     mode: LQGT
-    dataroot_GT: /home/IDM-SDE/datasets/Rain13K/test/Rain100L/target
-    dataroot_LQ: /home/IDM-SDE/datasets/Rain13K/test/Rain100L/input
+    dataroot_GT: ..\backend\Test10\target
+    dataroot_LQ: ..\backend\Test10\input
 
 #### network structures
 network_G:
@@ -36,4 +36,4 @@ network_G:
 
 #### path
 path:
-  pretrain_model_G: /home/IDM-SDE/experiments/IDM-SDE/ir-sde/models/latest_G.pth
+  pretrain_model_G: ..\backend\Deraining\700000_G.pth
