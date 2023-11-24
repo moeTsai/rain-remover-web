@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Processing Homepage</title>
+  </head>
+  <body>
+    <h1>Image Processing Homepage</h1>
+    <form action="/process_image" method="post" enctype="multipart/form-data">
+      <label for="image">Upload Image:</label>
+      <input type="file" name="image" id="image" accept="image/*" required />
+      <br />
+      <input type="submit" value="Process Image" />
+    </form>
+
+    {% if processed_image_data %}
+    <h2>Processed Image:</h2>
+    <img
+      src="data:image/png;base64,{{ processed_image_data }}"
+      alt="Processed Image"
+    />
+    {% endif %}
+  </body>
+</html>

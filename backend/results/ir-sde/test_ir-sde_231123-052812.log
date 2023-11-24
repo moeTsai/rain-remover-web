@@ -1,0 +1,9 @@
+23-11-23 05:28:12.309 - INFO: Dataset [LQGTDataset - Val_Dataset] is created.
+23-11-23 05:28:12.309 - INFO: Number of test images in [Val_Dataset]: 10
+23-11-23 05:28:13.658 - INFO: Loading model for G [..\backend\Deraining\700000_G.pth] ...
+23-11-23 05:28:14.005 - INFO: Model [DenoisingModel] is created.
+23-11-23 05:28:17.063 - INFO: 
+Testing [Val_Dataset]...
+23-11-23 05:31:26.255 - INFO: img  0:1               - PSNR: 23.201845 dB; SSIM: 0.659693; LPIPS: 0.156004; PSNR_Y: 24.766549 dB; SSIM_Y: 0.692486.
+23-11-23 05:33:58.433 - INFO: img  1:10              - PSNR: 18.276829 dB; SSIM: 0.649474; LPIPS: 0.317808; PSNR_Y: 19.562334 dB; SSIM_Y: 0.752521.
+23-11-23 05:36:27.519 - INFO: img  2:2               - PSNR: 16.057000 dB; SSIM: 0.615739; LPIPS: 0.267042; PSNR_Y: 17.381946 dB; SSIM_Y: 0.705492.

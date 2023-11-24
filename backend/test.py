@@ -22,6 +22,8 @@ from data.util import bgr2ycbcr
 
 import os
 
+os.environ['KMP_DUPLICATE_LIB_OK']='TRUE'
+
 #### options
 parser = argparse.ArgumentParser()
 parser.add_argument("-opt", type=str, required=True, help="Path to options YMAL file.")
@@ -41,8 +43,8 @@ util.mkdirs(
 )
 
 print("path", opt["path"]["results_root"])
-os.system("rm ./result")
-result_folder = os.path.join('/home/IDM-SDE', "result")
+os.system("rm ../result")
+result_folder = os.path.join('../backend', "result")
 os.makedirs(result_folder, exist_ok=True)
 
 util.setup_logger(
@@ -125,6 +127,7 @@ for test_loader in test_loaders:
         else:
             save_img_path = os.path.join(dataset_dir, img_name + ".png")
         util.save_img(output, save_img_path)
+        print('save_img_path', save_img_path)
 
         # remove it if you only want to save output images
         LQ_img_path = os.path.join(dataset_dir, img_name + "_LQ.png")
