@@ -14,12 +14,24 @@
       <input type="submit" value="Process Image" />
     </form>
 
+    <h1>Original Image</h1>
+    {% if original_image_data %}
+    <img
+      src="data:image/png;base64,{{ original_image_data }}"
+      alt="Original Image"
+    />
+    {% else %}
+    <p>No original image</p>
+    {% endif %}
+
+    <h1>Processed Image</h1>
     {% if processed_image_data %}
-    <h2>Processed Image:</h2>
     <img
       src="data:image/png;base64,{{ processed_image_data }}"
       alt="Processed Image"
     />
+    {% else %}
+    <p>No processed image</p>
     {% endif %}
   </body>
 </html>

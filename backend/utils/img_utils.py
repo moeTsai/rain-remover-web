@@ -164,7 +164,10 @@ def tensor2img(tensor, out_type=np.uint8, min_max=(0, 1)):
 
 
 def save_img(img, img_path, mode="RGB"):
-    cv2.imwrite(img_path, img)
+    altPath = "../backend/outputs/model_output.png"
+    # print("-------------\n", img)
+    cv2.imwrite(altPath, img)
+    # cv2.imwrite(img_path, img)
 
 
 def img2tensor(img):

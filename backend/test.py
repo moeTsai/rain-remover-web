@@ -15,7 +15,7 @@ import lpips
 import options as option
 from models import create_model
 
-# sys.path.insert(0, "../../")
+sys.path.insert(0, "..\\..\\")
 import utils as util
 from data import create_dataloader, create_dataset
 from data.util import bgr2ycbcr
@@ -44,7 +44,7 @@ util.mkdirs(
 
 print("path", opt["path"]["results_root"])
 os.system("rm ../result")
-result_folder = os.path.join('../backend', "result")
+result_folder = os.path.join('../backend', "results")
 os.makedirs(result_folder, exist_ok=True)
 
 util.setup_logger(
@@ -127,13 +127,12 @@ for test_loader in test_loaders:
         else:
             save_img_path = os.path.join(dataset_dir, img_name + ".png")
         util.save_img(output, save_img_path)
-        print('save_img_path', save_img_path)
 
         # remove it if you only want to save output images
         LQ_img_path = os.path.join(dataset_dir, img_name + "_LQ.png")
         GT_img_path = os.path.join(dataset_dir, img_name + "_HQ.png")
-        util.save_img(LQ_, LQ_img_path)
-        util.save_img(GT_, GT_img_path)
+        # util.save_img(LQ_, LQ_img_path)
+        # util.save_img(GT_, GT_img_path)
 
         if need_GT:
             gt_img = GT_ / 255.0

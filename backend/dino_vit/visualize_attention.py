@@ -106,7 +106,7 @@ def outputs_attentions(img):
     model.eval()
     model.to(device)
 
-    state_dict = torch.load('dino_vit\checkpoints\checkpoint.pth', map_location="cpu")
+    state_dict = torch.load('../backend\dino_vit\checkpoints\checkpoint.pth', map_location="cpu")
     if 'teacher' is not None and 'teacher' in state_dict:
         # print(f"Take key {'teacher'} in provided checkpoint dict")
         state_dict = state_dict['teacher']
